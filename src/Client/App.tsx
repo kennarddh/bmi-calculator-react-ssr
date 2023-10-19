@@ -29,10 +29,30 @@ const Gauge = styled.div`
 	width: var(--width);
 	aspect-ratio: 2/1;
 	border-radius: calc(var(--width) / 2) calc(var(--width) / 2) 0 0;
+
+	position: relative;
+`
+
+const Arrow = styled.div`
+	width: 10px;
+	height: 175px;
+	background-color: #000;
+	margin-top: -175px;
+
+	transform-origin: 50% 100%;
+	rotate: 0deg;
+
+	position: absolute;
+	top: 300px;
+	left: calc(300px - 10px / 2);
 `
 
 const App: FC = () => {
-	return <Gauge />
+	return (
+		<Gauge>
+			<Arrow></Arrow>
+		</Gauge>
+	)
 }
 
 export default App
