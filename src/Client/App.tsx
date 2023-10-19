@@ -67,7 +67,7 @@ const Text = styled.p`
 const App: FC = () => {
 	return (
 		<Gauge>
-			<Arrow rotate={0} />
+			<Arrow rotate={0 - 90} />
 			<TextContainer rotate={57.6 - 90}>
 				<Text>16</Text>
 			</TextContainer>
