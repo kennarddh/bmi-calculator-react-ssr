@@ -1,40 +1,38 @@
-import { FC, useState } from 'react'
-
 import { styled } from 'styled-components'
 
-const Button = styled.button`
-	padding: 10px 20px;
-	background-color: blue;
+import { FC } from 'react'
+
+const Gauge = styled.div`
+	background: 
+  /*black part */
+		radial-gradient(
+			circle at bottom center,
+			#fff 200px,
+			#fff,
+			transparent 200px
+		),
+		/*pizza's pieces*/
+			conic-gradient(
+				from 4.7rad at 50% 100%,
+				#3d4640 0deg 57.6deg,
+				#9ca92e 57.6deg 61.2deg,
+				#eec22a 61.2deg 66.6deg,
+				#e07b27 66.6deg 90deg,
+				#492d17 90deg 108deg,
+				#a5359f 108deg 126deg,
+				#39ff49 126deg 144deg,
+				#bb9f00 144deg 180deg
+			);
+
+	--width: 600px;
+
+	width: var(--width);
+	aspect-ratio: 2/1;
+	border-radius: calc(var(--width) / 2) calc(var(--width) / 2) 0 0;
 `
 
 const App: FC = () => {
-	const [Count, SetCount] = useState(0)
-
-	return (
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-			repellendus aliquid necessitatibus ad inventore, obcaecati
-			voluptatum numquam, pariatur modi dolorem tenetur dolor saepe
-			expedita voluptas officiis itaque perferendis consequuntur illum
-			dolorum asperiores. Enim omnis esse laboriosam fugiat, vel possimus
-			necessitatibus suscipit in fugit dolorum veritatis ipsa! Dolorem
-			recusandae quidem animi perspiciatis reprehenderit veniam eius
-			obcaecati molestiae ullam dolorum necessitatibus dolore sit neque
-			alias ratione, qui provident nesciunt corrupti officiis ipsa commodi
-			vel cupiditate quibusdam? Corrupti dolorum, voluptatem odio
-			reprehenderit eaque modi tempora asperiores quos voluptates facilis
-			laudantium dolores eligendi deserunt officiis rem ea? Architecto
-			officia exercitationem optio, molestias porro sit?
-			<Button
-				onClick={() => {
-					console.log('Clicked')
-					SetCount(prev => prev + 1)
-				}}
-			>
-				{Count}
-			</Button>
-		</div>
-	)
+	return <Gauge />
 }
 
 export default App
