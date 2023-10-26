@@ -71,7 +71,7 @@ const App: FC = () => {
 	const [Mass, SetMass] = useState<number>(0)
 	const [Height, SetHeight] = useState<number>(0)
 
-	const BMI = useMemo(() => Calculate(Mass, Height), [Mass, Height])
+	const BMI = useMemo(() => Calculate(Mass, Height / 100), [Mass, Height])
 
 	return (
 		<>
@@ -87,7 +87,7 @@ const App: FC = () => {
 				value={Height}
 				onChange={event => SetHeight(event.target.valueAsNumber)}
 			/>
-			<p>BMI: {BMI}</p>
+			<p>BMI: {BMI.toFixed(2)}</p>
 			<Gauge>
 				<Arrow rotate={(180 / 50) * BMI - 90} />
 				<TextContainer rotate={57.6 - 90}>
