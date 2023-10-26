@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-import { FC } from 'react'
+import { FC, useMemo, useState } from 'react'
 
 const Gauge = styled.div`
 	background: 
@@ -64,32 +64,55 @@ const Text = styled.p`
 	color: #fff;
 `
 
+const Calculate = (mass: number, height: number): number =>
+	mass / Math.pow(height, 2)
+
 const App: FC = () => {
+	const [Mass, SetMass] = useState<number>(0)
+	const [Height, SetHeight] = useState<number>(0)
+
+	const BMI = useMemo(() => Calculate(Mass, Height), [Mass, Height])
+
 	return (
-		<Gauge>
-			<Arrow rotate={0 - 90} />
-			<TextContainer rotate={57.6 - 90}>
-				<Text>16</Text>
-			</TextContainer>
-			<TextContainer rotate={61.2 - 90}>
-				<Text>17</Text>
-			</TextContainer>
-			<TextContainer rotate={66.6 - 90}>
-				<Text>18.5</Text>
-			</TextContainer>
-			<TextContainer rotate={90 - 90}>
-				<Text>25</Text>
-			</TextContainer>
-			<TextContainer rotate={108 - 90}>
-				<Text>30</Text>
-			</TextContainer>
-			<TextContainer rotate={126 - 90}>
-				<Text>35</Text>
-			</TextContainer>
-			<TextContainer rotate={144 - 90}>
-				<Text>40</Text>
-			</TextContainer>
-		</Gauge>
+		<>
+			<input
+				placeholder='Mass'
+				type='number'
+				value={Mass}
+				onChange={event => SetMass(event.target.valueAsNumber)}
+			/>
+			<input
+				placeholder='Height'
+				type='number'
+				value={Height}
+				onChange={event => SetHeight(event.target.valueAsNumber)}
+			/>
+			<p>BMI: {BMI}</p>
+			<Gauge>
+				<Arrow rotate={(180 / 50) * BMI - 90} />
+				<TextContainer rotate={57.6 - 90}>
+					<Text>16</Text>
+				</TextContainer>
+				<TextContainer rotate={61.2 - 90}>
+					<Text>17</Text>
+				</TextContainer>
+				<TextContainer rotate={66.6 - 90}>
+					<Text>18.5</Text>
+				</TextContainer>
+				<TextContainer rotate={90 - 90}>
+					<Text>25</Text>
+				</TextContainer>
+				<TextContainer rotate={108 - 90}>
+					<Text>30</Text>
+				</TextContainer>
+				<TextContainer rotate={126 - 90}>
+					<Text>35</Text>
+				</TextContainer>
+				<TextContainer rotate={144 - 90}>
+					<Text>40</Text>
+				</TextContainer>
+			</Gauge>
+		</>
 	)
 }
 
