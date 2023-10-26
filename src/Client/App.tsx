@@ -82,7 +82,7 @@ const App: FC = () => {
 				onChange={event => SetMass(event.target.valueAsNumber)}
 			/>
 			<input
-				placeholder='Height'
+				placeholder='Height (CM)'
 				type='number'
 				value={Height}
 				onChange={event => SetHeight(event.target.valueAsNumber)}
