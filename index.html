@@ -2,15 +2,181 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" href="favicon.ico" />
+		<link rel="icon" href="/bmi-calculator-react-ssr/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>React JS Boilerplate</title>
-		<!--styles-outlet-->
-		<script type="module" crossorigin src="/assets/index-0b2bc589.js"></script>
+		<title>BMI Calculator React SSR</title>
+		<style data-styled="true" data-styled-version="6.0.8">
+			.dcdIix {
+				background: radial-gradient(
+						circle at bottom center,
+						#fff 200px,
+						#fff,
+						transparent 200px
+					),
+					conic-gradient(
+						from 4.7rad at 50% 100%,
+						rgb(188, 32, 32) 0deg 57.6deg,
+						rgb(211, 136, 136) 57.6deg 61.2deg,
+						rgb(255, 228, 0) 61.2deg 66.6deg,
+						rgb(0, 129, 55) 66.6deg 90deg,
+						rgb(255, 228, 0) 90deg 108deg,
+						rgb(211, 136, 136) 108deg 126deg,
+						rgb(188, 32, 32) 126deg 144deg,
+						rgb(138, 1, 1) 144deg 180deg
+					);
+				--width: 600px;
+				width: var(--width);
+				aspect-ratio: 2/1;
+				border-radius: calc(var(--width) / 2) calc(var(--width) / 2) 0 0;
+				position: relative;
+			} /*!sc*/
+			data-styled.g1[id='sc-beyTiQ'] {
+				content: 'dcdIix,';
+			} /*!sc*/
+			.jEDtrr {
+				width: 10px;
+				height: 175px;
+				background-color: #000;
+				margin-top: -175px;
+				transform-origin: 50% 100%;
+				rotate: NaNdeg;
+				position: absolute;
+				top: 300px;
+				left: calc(300px - 10px / 2);
+			} /*!sc*/
+			data-styled.g2[id='sc-guDMob'] {
+				content: 'jEDtrr,';
+			} /*!sc*/
+			.feIKPh {
+				width: 25px;
+				height: 275px;
+				margin-top: -275px;
+				transform-origin: 50% 100%;
+				rotate: -32.4deg;
+				position: absolute;
+				top: 300px;
+				left: calc(300px - 25px / 2);
+			} /*!sc*/
+			.dLoqtb {
+				width: 25px;
+				height: 275px;
+				margin-top: -275px;
+				transform-origin: 50% 100%;
+				rotate: -28.799999999999997deg;
+				position: absolute;
+				top: 300px;
+				left: calc(300px - 25px / 2);
+			} /*!sc*/
+			.gUsxBr {
+				width: 25px;
+				height: 275px;
+				margin-top: -275px;
+				transform-origin: 50% 100%;
+				rotate: -23.400000000000006deg;
+				position: absolute;
+				top: 300px;
+				left: calc(300px - 25px / 2);
+			} /*!sc*/
+			.cXZvlX {
+				width: 25px;
+				height: 275px;
+				margin-top: -275px;
+				transform-origin: 50% 100%;
+				rotate: 0deg;
+				position: absolute;
+				top: 300px;
+				left: calc(300px - 25px / 2);
+			} /*!sc*/
+			.cEcFCK {
+				width: 25px;
+				height: 275px;
+				margin-top: -275px;
+				transform-origin: 50% 100%;
+				rotate: 18deg;
+				position: absolute;
+				top: 300px;
+				left: calc(300px - 25px / 2);
+			} /*!sc*/
+			.dewoYa {
+				width: 25px;
+				height: 275px;
+				margin-top: -275px;
+				transform-origin: 50% 100%;
+				rotate: 36deg;
+				position: absolute;
+				top: 300px;
+				left: calc(300px - 25px / 2);
+			} /*!sc*/
+			.jpYrbi {
+				width: 25px;
+				height: 275px;
+				margin-top: -275px;
+				transform-origin: 50% 100%;
+				rotate: 54deg;
+				position: absolute;
+				top: 300px;
+				left: calc(300px - 25px / 2);
+			} /*!sc*/
+			data-styled.g3[id='sc-dmyDmy'] {
+				content: 'feIKPh,dLoqtb,gUsxBr,cXZvlX,cEcFCK,dewoYa,jpYrbi,';
+			} /*!sc*/
+			.byDbYd {
+				color: #fff;
+			} /*!sc*/
+			data-styled.g4[id='sc-hLQTFJ'] {
+				content: 'byDbYd,';
+			} /*!sc*/
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			} /*!sc*/
+			data-styled.g5[id='sc-global-fOESdr1'] {
+				content: 'sc-global-fOESdr1,';
+			} /*!sc*/
+		</style>
+		<script
+			type="module"
+			crossorigin
+			src="/bmi-calculator-react-ssr/assets/index-0b2bc589.js"
+		></script>
 	</head>
 	<body>
-		<div id="root"><!--ssr-outlet--></div>
-		
+		<div id="root">
+			<input placeholder="Mass" type="number" value="0" /><input
+				placeholder="Height (CM)"
+				type="number"
+				value="0"
+			/>
+			<p>
+				BMI:
+				<!-- -->NaN
+			</p>
+			<div class="sc-beyTiQ dcdIix">
+				<div rotate="NaN" class="sc-guDMob jEDtrr"></div>
+				<div rotate="-32.4" class="sc-dmyDmy feIKPh">
+					<p class="sc-hLQTFJ byDbYd">16</p>
+				</div>
+				<div rotate="-28.799999999999997" class="sc-dmyDmy dLoqtb">
+					<p class="sc-hLQTFJ byDbYd">17</p>
+				</div>
+				<div rotate="-23.400000000000006" class="sc-dmyDmy gUsxBr">
+					<p class="sc-hLQTFJ byDbYd">18.5</p>
+				</div>
+				<div rotate="0" class="sc-dmyDmy cXZvlX">
+					<p class="sc-hLQTFJ byDbYd">25</p>
+				</div>
+				<div rotate="18" class="sc-dmyDmy cEcFCK">
+					<p class="sc-hLQTFJ byDbYd">30</p>
+				</div>
+				<div rotate="36" class="sc-dmyDmy dewoYa">
+					<p class="sc-hLQTFJ byDbYd">35</p>
+				</div>
+				<div rotate="54" class="sc-dmyDmy jpYrbi">
+					<p class="sc-hLQTFJ byDbYd">40</p>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
